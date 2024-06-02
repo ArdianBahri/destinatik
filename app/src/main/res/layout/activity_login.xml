@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/R_txt_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="130dp"
+        android:fontFamily="@font/urbanistbold"
+        android:text="Welcome Back!"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:id="@+id/layout_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/R_txt_welcome"
+        android:layout_marginTop="30dp"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/R_edt_email_wlcm"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/Gray"
+            android:hint="Enter your email"
+            android:padding="16dp"
+            android:textColorHint="@color/GrayDark"
+            android:fontFamily="@font/urbanistmedium"/>
+
+        <EditText
+            android:id="@+id/R_edt_password_wlcm"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/button_shape"
+            android:fontFamily="@font/urbanistmedium"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/Gray"
+            android:hint="Enter your password"
+            android:padding="16dp"
+            android:textColorHint="@color/GrayDark"/>
+
+        <TextView
+            android:id="@+id/R_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="end"
+            android:fontFamily="@font/urbanistsemibold"
+            android:text="Forgot Password?"
+            android:textColor="@color/GrayMediumDark" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/R_btn_login1"
+        android:fontFamily="@font/urbanistsemibold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_shape"
+        android:text="Login"
+        android:layout_below="@id/layout_login"
+        android:layout_centerHorizontal="true"
+        android:height="40dp"
+        android:width="370dp"/>
+
+    <LinearLayout
+        android:id="@+id/layout_or_login_with"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/R_btn_login1"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/GrayLight" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Or Login with"
+            android:fontFamily="@font/urbanistsemibold"
+            android:textColor="@color/GrayMediumDark"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/GrayLight" />
+
+    </LinearLayout>
+</RelativeLayout>

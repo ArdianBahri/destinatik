@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".RegisterActivity">
+
+    <ImageView
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/back"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="23dp"/>
+
+    <TextView
+        android:id="@+id/R_txt_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="130dp"
+        android:fontFamily="@font/urbanistbold"
+        android:text="Hello! Register to get started"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:id="@+id/layout_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/R_txt_register"
+        android:layout_marginTop="30dp"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/R_username"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/Gray"
+            android:hint="Username"
+            android:padding="16dp"
+            android:textColorHint="@color/GrayDark"
+            android:fontFamily="@font/urbanistmedium"/>
+
+        <EditText
+            android:id="@+id/R_email"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/button_shape"
+            android:fontFamily="@font/urbanistmedium"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/Gray"
+            android:hint="Email"
+            android:padding="16dp"
+            android:textColorHint="@color/GrayDark"/>
+
+        <EditText
+            android:id="@+id/R_password"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/button_shape"
+            android:fontFamily="@font/urbanistmedium"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/Gray"
+            android:hint="Password"
+            android:padding="16dp"
+            android:textColorHint="@color/GrayDark"/>
+        <EditText
+            android:id="@+id/R_cpassword"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/button_shape"
+            android:fontFamily="@font/urbanistmedium"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/Gray"
+            android:hint="Confirm Password"
+            android:padding="16dp"
+            android:textColorHint="@color/GrayDark"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/R_btn_register"
+        android:fontFamily="@font/urbanistsemibold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_shape"
+        android:text="Register"
+        android:layout_below="@id/layout_login"
+        android:layout_centerHorizontal="true"
+        android:height="40dp"
+        android:width="370dp"/>
+
+    <LinearLayout
+        android:id="@+id/layout_or_login_with"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/R_btn_register"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/GrayLight" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Or Register with"
+            android:fontFamily="@font/urbanistsemibold"
+            android:textColor="@color/GrayMediumDark"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/GrayLight" />
+
+    </LinearLayout>
+</RelativeLayout>
