@@ -5,17 +5,16 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     tools:context=".LoginActivity">
 
     <TextView
         android:id="@+id/R_txt_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="130dp"
         android:fontFamily="@font/urbanistbold"
-        android:text="Welcome Back!"
+        android:text="@string/welcome_back"
         android:textSize="25sp" />
 
     <LinearLayout
@@ -33,7 +32,7 @@
             android:layout_height="56dp"
             android:background="@drawable/button_shape"
             android:backgroundTint="@color/Gray"
-            android:hint="Enter your email"
+            android:hint="@string/enter_your_email"
             android:padding="16dp"
             android:textColorHint="@color/GrayDark"
             android:fontFamily="@font/urbanistmedium"/>
@@ -46,7 +45,7 @@
             android:fontFamily="@font/urbanistmedium"
             android:layout_marginTop="15dp"
             android:backgroundTint="@color/Gray"
-            android:hint="Enter your password"
+            android:hint="@string/enter_your_password"
             android:padding="16dp"
             android:textColorHint="@color/GrayDark"/>
 
@@ -57,7 +56,7 @@
             android:layout_marginTop="15dp"
             android:layout_gravity="end"
             android:fontFamily="@font/urbanistsemibold"
-            android:text="Forgot Password?"
+            android:text="@string/forgot_password"
             android:textColor="@color/GrayMediumDark" />
     </LinearLayout>
 
@@ -67,7 +66,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/button_shape"
-        android:text="Login"
+        android:backgroundTint="@color/colorSecondary"
+        android:text="@string/login"
         android:layout_below="@id/layout_login"
         android:layout_centerHorizontal="true"
         android:height="40dp"
@@ -95,7 +95,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:text="Or Login with"
+            android:text="@string/or_login_with"
             android:fontFamily="@font/urbanistsemibold"
             android:textColor="@color/GrayMediumDark"
             android:textSize="14sp" />
@@ -107,4 +107,53 @@
             android:background="@color/GrayLight" />
 
     </LinearLayout>
+
+<!--    Cardview Google Sign-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_google_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_or_login_with"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="8dp">
+
+        <ImageView
+            android:id="@+id/img_google_login"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/google"
+            android:src="@drawable/google_ic" />
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card_google_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp">
+
+        <TextView
+            android:id="@+id/text_below_google_login_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/urbanistmedium"
+            android:text="@string/don_t_have_an_account"
+            android:textColor="@color/GrayMediumDark"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/text_below_google_login_1"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/urbanistmedium"
+            android:text="@string/register_now"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
 </RelativeLayout>
