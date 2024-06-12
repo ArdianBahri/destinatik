@@ -29,4 +29,11 @@
     <string name="favorite">Favorite</string>
     <string name="notifications">Notification</string>
     <string name="profile">Profile</string>
+    <string name="search">Search</string>
+    <string name="recommended">Recommended</string>
+    <string name="star_icon">Star icon</string>
+    <string name="_4_8">4.8</string>
+    <string name="settings">Settings</string>
+    <string name="you_are_looking_for_a_trip">You are looking for a trip ?</string>
+    <string name="recommended_icon">Recommended Icon</string>
 </resources>

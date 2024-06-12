@@ -1,3 +1,7 @@
 package com.dicoding.destinatik.core.data.remote.response.users
 
-data class UserResponse()
+import com.dicoding.destinatik.core.domain.model.UsersModel
+
+data class UserResponse(
+    val rows: List<UsersModel>
+)
