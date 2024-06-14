@@ -61,6 +61,9 @@ dependencies {
     //Paging3
     implementation(libs.androidx.paging.runtime.ktx)
 
+    //blur
+    implementation(libs.blurview)
+
     //swipe
     implementation(libs.androidx.swiperefreshlayout)
 

@@ -32,16 +32,17 @@
             android:name=".ui.LoginActivity"
             android:exported="true"
             android:theme="@style/Theme.Destinatik">
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Destinatik">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.Destinatik"/>
     </application>
 
 </manifest>
