@@ -1,10 +1,9 @@
 [versions]
 agp = "8.5.0"
-blurview = "1.6.6"
 kotlin = "2.0.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
-devtoolksp = "2.0.0-1.0.21"
+devtoolksp = "2.0.0-1.0.22"
 junitVersion = "1.1.5"
 espressoCore = "3.5.1"
 swiperefreshlayout = "1.1.0"
@@ -18,7 +17,7 @@ appcompat = "1.7.0"
 material = "1.12.0"
 activity = "1.9.0"
 constraintlayout = "2.1.4"
-lifecycleViewmodelKtx = "2.8.1"
+lifecycleViewmodelKtx = "2.8.2"
 glide = "4.16.0"
 navigationUiKtx = "2.7.7"
 converterGson = "2.11.0"
@@ -34,7 +33,7 @@ googleAndroidLibrariesMapsplatformSecretsGradlePlugin = "2.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
-blurview = { module = "com.eightbitlab:blurview", version.ref = "blurview" }
+
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 circleimageview = { module = "de.hdodenhof:circleimageview", version.ref = "circleimageview" }

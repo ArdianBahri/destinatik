@@ -18,6 +18,12 @@
 
     <style name="Theme.Destinatik" parent="Base.Theme.Destinatik" />
 
+    <style name="Theme.SplashScreen" parent="Base.Theme.Destinatik">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
     <style name="CustomButtonStyle" parent="Widget.Material3.Button">
         <item name="android:background">@drawable/button_shape</item>
         <item name="android:windowBackground">@color/colorSecondary</item>

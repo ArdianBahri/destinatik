@@ -20,6 +20,10 @@ android {
         versionCode = 1
         versionName = "1.0"
 
+
+//        buildConfigField("String", "BASE_URL", "\"https://api-service-backend-tpercgplna-uc.a.run.app/api/\"")
+        buildConfigField("String", "BASE_URL", "\"https://reihaniz.com/destinatik/\"")
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -62,7 +66,7 @@ dependencies {
     implementation(libs.androidx.paging.runtime.ktx)
 
     //blur
-    implementation(libs.blurview)
+
 
     //swipe
     implementation(libs.androidx.swiperefreshlayout)

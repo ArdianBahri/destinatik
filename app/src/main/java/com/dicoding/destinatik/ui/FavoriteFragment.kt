@@ -5,17 +5,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.dicoding.destinatik.R
+import com.dicoding.destinatik.databinding.FragmentFavoriteBinding
 
 
-class OnboardingFragment : Fragment() {
+class FavoriteFragment : Fragment() {
+    private var _binding: FragmentFavoriteBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_onboarding, container, false)
+        _binding = FragmentFavoriteBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
 }
