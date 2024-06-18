@@ -22,7 +22,7 @@ android {
 
 
 //        buildConfigField("String", "BASE_URL", "\"https://api-service-backend-tpercgplna-uc.a.run.app/api/\"")
-        buildConfigField("String", "BASE_URL", "\"https://reihaniz.com/destinatik/\"")
+        buildConfigField("String", "BASE_URL", "\"https://trial-capstone-426318.et.r.appspot.com/\"")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

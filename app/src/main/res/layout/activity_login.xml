@@ -41,6 +41,7 @@
             android:id="@+id/R_edt_password_wlcm"
             android:layout_width="match_parent"
             android:layout_height="56dp"
+            android:inputType="textPassword"
             android:background="@drawable/button_shape"
             android:fontFamily="@font/urbanistmedium"
             android:layout_marginTop="15dp"

@@ -12,11 +12,6 @@
         android:title="@string/favorite" />
 
     <item
-        android:id="@+id/notificationsFragment"
-        android:icon="@drawable/ic_notifications"
-        android:title="@string/notifications" />
-
-    <item
         android:id="@+id/profileFragment"
         android:icon="@drawable/ic_profiles"
         android:title="@string/profile" />

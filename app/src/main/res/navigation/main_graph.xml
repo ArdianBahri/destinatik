@@ -26,6 +26,9 @@
         android:name="com.dicoding.destinatik.ui.FavoriteFragment"
         android:label="Favorite"
         tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 
 <!--    <fragment-->
@@ -38,7 +41,11 @@
         android:id="@+id/profileFragment"
         android:name="com.dicoding.destinatik.ui.ProfileFragment"
         android:label="Profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/splashFragment"
@@ -67,33 +74,10 @@
         <action
             android:id="@+id/action_settingsFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
-        <action
-            android:id="@+id/action_settingsFragment_to_loginFragment"
-            app:destination="@id/loginActivity" />
     </fragment>
-    <activity
-        android:id="@+id/forgotPasswordActivity"
-        android:name="com.dicoding.destinatik.ui.ForgotPasswordActivity"
-        android:label="activity_forgot_password"
-        tools:layout="@layout/activity_forgot_password" />
-    <activity
-        android:id="@+id/loginActivity"
-        android:name="com.dicoding.destinatik.ui.LoginActivity"
-        android:label="activity_login"
-        tools:layout="@layout/activity_login" />
-    <activity
-        android:id="@+id/registerActivity"
-        android:name="com.dicoding.destinatik.ui.RegisterActivity"
-        android:label="activity_register"
-        tools:layout="@layout/activity_register" />
-    <activity
-        android:id="@+id/verifyActivity"
-        android:name="com.dicoding.destinatik.ui.VerifyActivity"
-        android:label="activity_verify"
-        tools:layout="@layout/activity_verify" />
-    <activity
-        android:id="@+id/resetActivity"
-        android:name="com.dicoding.destinatik.ui.ResetActivity"
-        android:label="activity_reset"
-        tools:layout="@layout/activity_reset" />
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.dicoding.destinatik.ui.MapsFragment"
+        android:label="MapsFragment"
+        tools:layout="@layout/fragment_maps"/>
 </navigation>

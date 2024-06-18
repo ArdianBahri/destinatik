@@ -39,7 +39,6 @@ class MainActivity : AppCompatActivity() {
             when (destination.id) {
                 R.id.homeFragment,
                 R.id.favoriteFragment,
-//                R.id.notificationsFragment,
                 R.id.profileFragment -> showBottomNav()
 
                 else -> hideBottomNav()
