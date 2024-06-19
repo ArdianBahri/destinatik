@@ -60,7 +60,14 @@
         android:id="@+id/detailsFragment"
         android:name="com.dicoding.destinatik.ui.DetailsFragment"
         android:label="fragment_details"
-        tools:layout="@layout/fragment_details" />
+        tools:layout="@layout/fragment_details">
+        <action
+            android:id="@+id/action_detailsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_detailsFragment_to_ratingFragment"
+            app:destination="@id/ratingFragment" />
+    </fragment>
     <fragment
         android:id="@+id/favouriteFragment"
         android:name="com.dicoding.destinatik.ui.FavouriteFragment"
@@ -80,4 +87,12 @@
         android:name="com.dicoding.destinatik.ui.MapsFragment"
         android:label="MapsFragment"
         tools:layout="@layout/fragment_maps"/>
+    <fragment
+        android:id="@+id/ratingFragment"
+        android:name="com.dicoding.destinatik.ui.RatingFragment"
+        android:label="RatingFragment">
+        <action
+            android:id="@+id/action_ratingFragment_to_homeFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
 </navigation>
