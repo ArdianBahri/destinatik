@@ -57,7 +57,7 @@ class LoginActivity : AppCompatActivity() {
 
         authViewModel.loginResult.observe(this) { response ->
             binding.progressBar.visibility = View.GONE
-            if (response != null) {
+            if (response != null && response.token != null) {
                 authPreferences.saveToken(response.token)
                 authPreferences.saveUserId(response.userId)
                 // Navigate to MainActivity

@@ -41,6 +41,6 @@ class AuthPreferences(
     companion object {
         private const val PREFS_NAME = "auth_prefs"
         private const val TOKEN_KEY = "auth_token"
-        private const val USER_ID_KEY = "user_id"
+        private const val USER_ID_KEY = "userId"
     }
 }
