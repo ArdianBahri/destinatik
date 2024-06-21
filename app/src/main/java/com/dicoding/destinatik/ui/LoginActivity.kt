@@ -2,6 +2,7 @@ package com.dicoding.destinatik.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
@@ -58,6 +59,7 @@ class LoginActivity : AppCompatActivity() {
             binding.progressBar.visibility = View.GONE
             if (response != null) {
                 authPreferences.saveToken(response.token)
+                authPreferences.saveUserId(response.userId)
                 // Navigate to MainActivity
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)

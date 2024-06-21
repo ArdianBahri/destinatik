@@ -21,8 +21,8 @@ android {
         versionName = "1.0"
 
 
-        buildConfigField("String", "BASE_URL", "\"https://api-service-backend-tpercgplna-uc.a.run.app/api/\"")
-//        buildConfigField("String", "BASE_URL", "\"https://trial-capstone-426318.et.r.appspot.com/\"")
+        buildConfigField("String", "BASE_URL", "\"https://reihaniz.com/destinatik/\"")
+        buildConfigField("String", "BASE_URL_MAIN", "\"https://destinatik-api-pd46stytga-uc.a.run.app/\"")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

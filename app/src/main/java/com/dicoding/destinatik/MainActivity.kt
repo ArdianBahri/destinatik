@@ -1,15 +1,18 @@
+// com/dicoding/destinatik/MainActivity.kt
 package com.dicoding.destinatik
 
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.dicoding.destinatik.core.data.local.preferences.auth.AuthPreferences
+import com.dicoding.destinatik.core.data.local.preferences.settings.SettingsPreferences
 import com.dicoding.destinatik.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -29,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         authPreferences = AuthPreferences(this)
+
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.frame_container) as NavHostFragment
         navController = navHostFragment.navController
@@ -40,11 +44,16 @@ class MainActivity : AppCompatActivity() {
                 R.id.homeFragment,
                 R.id.favoriteFragment,
                 R.id.profileFragment -> showBottomNav()
-
                 else -> hideBottomNav()
             }
         }
 
+        // Load the dark mode preference
+        val settingsPreferences = SettingsPreferences(this)
+        val isDarkMode = settingsPreferences.isDarkMode()
+        AppCompatDelegate.setDefaultNightMode(
+            if (isDarkMode) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO
+        )
     }
 
     private fun showBottomNav() {
@@ -54,6 +63,4 @@ class MainActivity : AppCompatActivity() {
     private fun hideBottomNav() {
         binding.bottomNav.visibility = View.GONE
     }
-
-
 }

@@ -1,17 +1,13 @@
 package com.dicoding.destinatik.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.dicoding.destinatik.R
-import com.dicoding.destinatik.databinding.ActivityLoginBinding
-import com.dicoding.destinatik.databinding.FragmentHomeBinding
 import com.dicoding.destinatik.databinding.FragmentRatingBinding
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-
-class RatingFragment : Fragment() {
+class RatingFragment : BottomSheetDialogFragment() {
     private var _binding: FragmentRatingBinding? = null
     private val binding get() = _binding!!
 
@@ -19,8 +15,12 @@ class RatingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         _binding = FragmentRatingBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
