@@ -57,15 +57,35 @@ class LoginActivity : AppCompatActivity() {
 
         authViewModel.loginResult.observe(this) { response ->
             binding.progressBar.visibility = View.GONE
-            if (response != null && response.token != null) {
-                authPreferences.saveToken(response.token)
-                authPreferences.saveUserId(response.userId)
+            if (response != null) {
+                Log.d("LoginActivity", "Login successful: $response")
+
+                val token = response.token
+                if (token != null) {
+                    Log.d("LoginActivity", "Saving token: $token")
+                    authPreferences.saveToken(token)
+                } else {
+                    Log.e("LoginActivity", "Login failed: Token is null")
+                    showErrorDialog("Login failed")
+                    return@observe
+                }
+
+                val userId = response.userId
+                if (userId != null) {
+                    Log.d("LoginActivity", "Saving userId: $userId")
+                    authPreferences.saveUserId(userId)
+                } else {
+                    Log.e("LoginActivity", "Login failed: User ID is null")
+                    showErrorDialog("Login failed")
+                    return@observe
+                }
+
                 // Navigate to MainActivity
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 finish()
             } else {
-                showErrorDialog("Something went wrong or username and password wrong")
+                showErrorDialog("Something went wrong or username and password are incorrect")
             }
         }
 
